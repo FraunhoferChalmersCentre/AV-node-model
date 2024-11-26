@@ -1,0 +1,16 @@
+This folder contains all functions for running the particle filter and smoothing algorithm explained in the article:
+'ECG-based beat-to-beat assessment of AV node conduction properties during AF'.
+
+PF is an acronym for particle filter, and the functions starting with PF are thus related to the particle filter.
+
+The smoothing algorithm is in the function 'PF_smoothing'.
+
+The functions 'Z_matrix', 'phase', and 'signalquality_updated_mikeal_fixed_MK' are related to the article with DOI 10.3389/fphys.2022.976925.
+
+
+To run the PF and smoothing algorithm using EGM data, run the script 'Main_known.m'. 
+
+To run the PF and smoothing algorithm using ECG data, run the script 'Main_unknown.m'.
+
+To run the model on a Linux or Mac, you have to mex the file 'Model_PF' by running the following command in Matlab:
+mex Model_PF.cpp
